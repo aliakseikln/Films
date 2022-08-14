@@ -1,6 +1,7 @@
 package com.example.films.moviedetails.hilt
 
 import com.example.films.moviedetails.remote.MovieInterface
+import com.example.films.moviedetails.ui.details.MovieDetailsRepository
 import com.example.films.moviedetails.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -21,5 +22,10 @@ object HiltModules {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(MovieInterface::class.java)
+    }
+
+    @Provides
+    fun provideRepository(movieInterface: MovieInterface): MovieDetailsRepository {
+        return MovieDetailsRepository(movieInterface)
     }
 }

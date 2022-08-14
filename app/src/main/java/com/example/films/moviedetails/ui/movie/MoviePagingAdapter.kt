@@ -11,6 +11,8 @@ import com.example.films.moviedetails.data.Movie
 
 class MoviePagingAdapter : PagingDataAdapter<Movie, MoviePagingAdapter.MyViewHolder>(DIFF_UTIL) {
 
+    var onClick: ((String) -> Unit)? = null
+
     companion object {
         val DIFF_UTIL = object : DiffUtil.ItemCallback<Movie>() {
             override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
@@ -24,7 +26,14 @@ class MoviePagingAdapter : PagingDataAdapter<Movie, MoviePagingAdapter.MyViewHol
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.viewDataBinding.setVariable(BR.movie, getItem(position))
+        val data = getItem(position)
+
+        holder.viewDataBinding.setVariable(BR.movie, data)
+        holder.viewDataBinding.root.setOnClickListener {
+            onClick?.let {
+                it(data?.imdbID!!)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -34,6 +43,10 @@ class MoviePagingAdapter : PagingDataAdapter<Movie, MoviePagingAdapter.MyViewHol
             false
         )
         return MyViewHolder(binding)
+    }
+
+    fun onMovieClick(listener: (String) -> Unit) {
+        onClick = listener
     }
 
     inner class MyViewHolder(val viewDataBinding: ViewHolderMovieBinding) :

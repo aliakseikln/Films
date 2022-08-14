@@ -8,9 +8,10 @@ import com.example.films.moviedetails.utils.Constants
 
 class MoviePaging(private val s: String, private val movieInterface: MovieInterface) :
     PagingSource<Int, Movie>() {
+
     override fun getRefreshKey(state: PagingState<Int, Movie>): Int? {
         return state.anchorPosition?.let {
-            val anchorPage = state?.closestPageToPosition(it)
+            val anchorPage = state.closestPageToPosition(it)
             anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)
         }
     }
