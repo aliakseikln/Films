@@ -6,7 +6,7 @@ A simple application for finding movies on the Imdb
 
 # Libraries and technologies used.
 - Retrofit : Making HTTP connection with the rest API and convert reponse json file to Kotlin/Java object.
-- MVVM & LiveData
+- MVVM & LiveData : Saperate logic code from views and save the state in case the screen configuration changes.
 - Coroutines : Do some code in the background.
 - Data binding : Allows to bind UI components in layouts to data sources.
 - Hilt : Compile-time framework for dependency injection.
