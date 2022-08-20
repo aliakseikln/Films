@@ -8,9 +8,9 @@ Just click on the search button and write what to look for and the application w
 
 ## Case Study:
 * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Dependency injection in the project.
-     - To simplify Dagger-related infrastructure for Android apps.
-     - To create a standard set of components and scopes to ease setup, readability/understanding, and code sharing between apps.
-     - To provide an easy way to provision different bindings to various build types (e.g. testing, debug, or release).
+     - Simplify Dagger-related infrastructure for Android apps.
+     - Create a standard set of components and scopes to ease setup, readability/understanding, and code sharing between apps.
+     - Provide an easy way to provision different bindings to various build types (e.g. testing, debug, or release).
 * [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - To load movies into an infinite list while user scrolls down
 
    - Repository layer:
