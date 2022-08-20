@@ -3,10 +3,22 @@
 Just click on the search button and write what to look for and the application will find and show you all the movies that are available on the IMDb for such a request! You can also click on the movie that will be found and see its detailed description.
 
 ## Case Study:
-* [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) 
-  - dependency injection in the project
-* [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) 
-  - to load movies into an infinite list while user scrolls down
+* [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - dependency injection in the project.
+     - To simplify Dagger-related infrastructure for Android apps.
+     - To create a standard set of components and scopes to ease setup, readability/understanding, and code sharing between apps.
+     - To provide an easy way to provision different bindings to various build types (e.g. testing, debug, or release).
+* [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - to load movies into an infinite list while user scrolls down
+
+   - Repository layer:
+      * The primary Paging library component in the repository layer is PagingSource. Each PagingSource object defines a source of data and how to retrieve data from          that source. A PagingSource object can load data from any single source, including network sources and local databases.
+       Another Paging library component that you might use is RemoteMediator. A RemoteMediator object handles paging from a layered data source, such as a network data        source with a local database cache.
+   - ViewModel layer:
+      * ViewModel layerThe Pager component provides a public API for constructing instances of PagingData that are exposed in reactive streams, based on a PagingSource object and a PagingConfig configuration object.
+The component that connects the ViewModel layer to the UI is PagingData. A PagingData object is a container for a snapshot of paginated data. It queries a PagingSource object and stores the result.
+   - UI Layer:
+     * The primary Paging library component in the UI layer is PagingDataAdapter, a RecyclerView adapter that handles paginated data.
+
+![image](https://user-images.githubusercontent.com/48939805/185756230-a033a720-cce7-4622-8c07-3758c7d9af31.png)
 
 ## Preview:
 <img src="https://user-images.githubusercontent.com/48939805/185735790-b3caf843-e91a-42fd-acdb-4c91a92a5c3b.gif" width=30% height=30%>
