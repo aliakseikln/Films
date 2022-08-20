@@ -3,11 +3,11 @@
 Just click on the search button and write what to look for and the application will find and show you all the movies that are available on the IMDb for such a request! You can also click on the movie that will be found and see its detailed description.
 
 ## Case Study:
-* [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - dependency injection in the project.
+* [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Dependency injection in the project.
      - To simplify Dagger-related infrastructure for Android apps.
      - To create a standard set of components and scopes to ease setup, readability/understanding, and code sharing between apps.
      - To provide an easy way to provision different bindings to various build types (e.g. testing, debug, or release).
-* [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - to load movies into an infinite list while user scrolls down
+* [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - To load movies into an infinite list while user scrolls down
 
    - Repository layer:
       * The primary Paging library component in the repository layer is PagingSource. Each PagingSource object defines a source of data and how to retrieve data from          that source. A PagingSource object can load data from any single source, including network sources and local databases.
