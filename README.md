@@ -2,6 +2,10 @@
 
 Just click on the search button and write what to look for and the application will find and show you all the movies that are available on the IMDb for such a request! You can also click on the movie that will be found and see its detailed description.
 
+## Preview:
+<img src="https://user-images.githubusercontent.com/48939805/185735790-b3caf843-e91a-42fd-acdb-4c91a92a5c3b.gif" width=30% height=30%>
+
+
 ## Case Study:
 * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Dependency injection in the project.
      - To simplify Dagger-related infrastructure for Android apps.
@@ -18,11 +22,7 @@ The component that connects the ViewModel layer to the UI is PagingData. A Pagin
    - UI Layer:
      * The primary Paging library component in the UI layer is PagingDataAdapter, a RecyclerView adapter that handles paginated data.
 
-![image](https://user-images.githubusercontent.com/48939805/185756230-a033a720-cce7-4622-8c07-3758c7d9af31.png)
-
-## Preview:
-<img src="https://user-images.githubusercontent.com/48939805/185735790-b3caf843-e91a-42fd-acdb-4c91a92a5c3b.gif" width=30% height=30%>
-
+<img src="https://user-images.githubusercontent.com/48939805/185756951-1645554c-cd3a-465c-9592-ba09782940a0.svg" width=60% height=60%>
 
 # Libraries and technologies used.
 - [Retrofit](https://square.github.io/retrofit/) - Making HTTP connection with the rest API and convert reponse json file to Kotlin/Java object.
