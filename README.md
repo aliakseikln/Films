@@ -3,8 +3,10 @@
 Just click on the search button and write what to look for and the application will find and show you all the movies that are available on the IMDb for such a request! You can also click on the movie that will be found and see its detailed description.
 
 ## Case Study:
-* [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - dependency injection in the project
-* [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - to load movies into an infinite list while the user scrolls down
+* [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) 
+  - dependency injection in the project
+* [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) 
+  - to load movies into an infinite list while user scrolls down
 
 ## Preview:
 <img src="https://user-images.githubusercontent.com/48939805/185735790-b3caf843-e91a-42fd-acdb-4c91a92a5c3b.gif" width=30% height=30%>
