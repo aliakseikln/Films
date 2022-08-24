@@ -13,7 +13,7 @@ Just click on the search button and write what to look for and the application w
 * [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - Load movies into an infinite list while user scrolls down
      - Implement the PagingSource.
      - Build and configure PagingData.
-     - Request your data in the ViewModel.
+     - Request data in the ViewModel.
      - Creating PagingDataAdapter.
      - Setup RecyclerView to the PagingData.
      - Getting the States of the Paging data.
