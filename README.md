@@ -21,8 +21,8 @@ Just click on the search button and write what to look for and the application w
 
 # Libraries and technologies used.
 - [Retrofit](https://square.github.io/retrofit/) - Making HTTP connection with the rest API and convert reponse json file to Kotlin/Java object.
-- [MVVM & LiveData](https://developer.android.com/jetpack/docs/guide) : Saperate logic code from views and save the state in case the screen configuration changes.
-- [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) -Background code execution.
+- [MVVM & LiveData](https://developer.android.com/jetpack/docs/guide) - Saperate logic code from views and save the state in case the screen configuration changes.
+- [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) - Background code execution.
 - [Data binding](https://developer.android.com/topic/libraries/data-binding) - Allows to bind UI components in layouts to data sources.
 - [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Compile-time framework for dependency injection.
 - [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - Load and display small chunks of data at a time.
