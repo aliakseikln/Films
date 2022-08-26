@@ -5,22 +5,53 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.films.R
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.example.films.databinding.FragmentDetailsBinding
+import com.example.films.moviedetails.MovieViewModel
+import com.example.films.moviedetails.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
 class DetailsFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    lateinit var binding: FragmentDetailsBinding
+    private val args: DetailsFragmentArgs by navArgs()
+    private val viewModel: MovieViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        binding = FragmentDetailsBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        return inflater.inflate(R.layout.fragment_details, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        binding.backPress.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        viewModel.getMovieDetails(args.imdbId!!)
+
+        viewModel.movieDetails.observe(viewLifecycleOwner) {
+            when (it.getContentIfNotHandled()?.status) {
+                Status.LOADING -> {
+                    binding.detailsProgress.visibility = View.VISIBLE
+                }
+                Status.ERROR -> {
+                    binding.detailsProgress.visibility = View.GONE
+                }
+                Status.SUCCESS -> {
+                    binding.detailsProgress.visibility = View.GONE
+                    binding.movieDetails = it.peekContent().data
+                }
+                else -> {}
+            }
+        }
+
     }
 }
